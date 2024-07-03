@@ -1,0 +1,14 @@
+# #!/bin/sh
+
+# # Run ESLint on staged files
+# npx eslint --ext .js,.jsx --cache --fix $(git diff --cached --name-only --diff-filter=ACMRTUXB | grep -E '\.(js|jsx)$')
+
+# # If ESLint found errors, prevent the push
+# if [ $? -ne 0 ]; then
+#     echo "ESLint found errors. Aborting push."
+#     exit 1
+# fi
+
+# # If everything passed, allow the push
+# exit 0
+echo "hello from pre-push!"
