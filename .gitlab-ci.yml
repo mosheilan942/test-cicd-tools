@@ -1,0 +1,18 @@
+stages:
+  - build
+  - test
+
+job1:
+  stage: build
+  script:
+    - echo "Building..."
+  tags:
+    - docker
+
+job2:
+  stage: test
+  script:
+    - echo "Testing..."
+  tags:
+    - docker
+    - linux
