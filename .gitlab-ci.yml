@@ -1,18 +1,28 @@
 stages:
   - build
-  - test
+  - deploy
 
-job1:
+build:
   stage: build
   script:
-    - echo "Building..."
+    - cd client
+    - npm i --force
+    - cd ../server
+    - npm i --force
+
   tags:
     - docker
 
-job2:
-  stage: test
+deploy:
+  stage: deploy
+  dependencies:
+    - build
   script:
-    - echo "Testing..."
+    - cd server
+    - npm run start:dev
+    - cd ../client
+    - npm run start
+
   tags:
     - docker
     - linux

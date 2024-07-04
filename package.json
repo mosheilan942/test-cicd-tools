@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "lint-one": "prettier --check .",
     "lint-two": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint-three": "prettier --write .",
     "preview": "vite preview",
     "prepare": "husky",
     "test": "echo \"Error: no test specified\""
@@ -22,7 +23,7 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.45.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^9.0.11",
