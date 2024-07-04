@@ -1,1 +1,1 @@
-echo "wow! * 2"
+echo "hello from post-commit!"
