@@ -1,4 +1,10 @@
 npm test
 echo "hello from pre-commit!"
-npm run lint-three && npm run lint-two && git add -A . && echo "Prettier ran successfully!"
-exit 1
+git add -A .
+npm run lint-three && npm run lint-two && echo "Prettier ran successfully!"
+# If ESLint found errors, prevent the push
+if [ $? -ne 0 ]; then
+    echo "ESLint found errors. Aborting push."
+    exit 1
+fi
+exit 0
