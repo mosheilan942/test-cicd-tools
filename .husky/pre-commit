@@ -1,10 +1,11 @@
 # #!/usr/bin/env sh
 echo "hello from pre-commit!"
-npx lint-staged --verbose && echo "Prettier ran successfully!"
+npx lint-staged --verbose 
 if [ $? -ne 0 ]; then
     echo "ESLint found errors. Aborting push."
     exit 1
 fi
+echo "Prettier and eslint runs successfully!"
 exit 0
 
 

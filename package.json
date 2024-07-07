@@ -17,8 +17,8 @@
   "lint-staged": {
     "(*.tsx|*.ts)": [
       "npm run lint-three",
-      "npm run lint-two",
-      "npm run lint"
+      "npm run lint",
+      "npm run lint-two"
     ]
   },
   "dependencies": {
