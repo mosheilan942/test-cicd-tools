@@ -1,7 +1,11 @@
-npm test
-echo "hello from pre-commit!"
-git add -A .
-npm npx lint-staged && echo "Prettier ran successfully!"
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+# npm test
+# echo "hello from pre-commit!"
+# git add -A .
+# npm npx lint-staged && echo "Prettier ran successfully!"
+
+npx lint-staged && echo "Prettier ran successfully!"
 # If ESLint found errors, prevent the push
 if [ $? -ne 0 ]; then
     echo "ESLint found errors. Aborting push."
