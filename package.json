@@ -16,6 +16,7 @@
   },
   "lint-staged": {
     "*.{ts, tsx}": [
+      "npm run lint-two",
       "npm run lint",
       "npm run format"
     ]
