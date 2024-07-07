@@ -24,7 +24,10 @@ module.exports = {
     "max-statements": ["warn", 7],
     "max-params": ["warn", 3],
     "max-lines-per-function": ["warn", 100],
-    "max-lines": ["error", { max: 150, skipBlankLines: true, skipComments: true }],
+    "max-lines": [
+      "error",
+      { max: 150, skipBlankLines: true, skipComments: true },
+    ],
     eqeqeq: ["error", "smart"],
     curly: "warn",
     "consistent-return": "error",
@@ -52,9 +55,12 @@ module.exports = {
         ],
       },
     ],
-    "prefer-destructuring": ["warn", {
-      "array": false,
-      "object": true
-    }]
+    "prefer-destructuring": [
+      "warn",
+      {
+        array: false,
+        object: true,
+      },
+    ],
   },
 };

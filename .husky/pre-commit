@@ -1,12 +1,21 @@
-#!/usr/bin/env sh
-# . "$(dirname "$0")/_/husky.sh"
-npm test
+# #!/usr/bin/env sh
 echo "hello from pre-commit!"
 git add -A .
 npx lint-staged && echo "Prettier ran successfully!"
-# If ESLint found errors, prevent the push
 if [ $? -ne 0 ]; then
     echo "ESLint found errors. Aborting push."
     exit 1
 fi
 exit 0
+
+
+# npm test
+# echo "hello from pre-commit!"
+# git add -A .
+# npm run lint-three && npm run lint-two && echo "Prettier ran successfully!"
+# # If ESLint found errors, prevent the push
+# if [ $? -ne 0 ]; then
+#     echo "ESLint found errors. Aborting push."
+#     exit 1
+# fi
+# exit 0
