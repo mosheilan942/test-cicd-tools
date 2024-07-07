@@ -88,21 +88,21 @@ import './App.css';
 // }
 // console.log(foo);
 
-// const foo = () => {
-// 	const a = 1;
-// 	const b = 2;
-// 	const c = 3;
-// 	const d = 4;
-// 	const e = 5;
-// 	const f = 6;
-// 	const g = 7;
-// 	const h = 8;
-// 	const i = 9;
-// 	const j = 10;
-// 	const k = 11;
-// 	console.log(a, b, c, d, e, f, g, h, i, j, k);
-// }
-// console.log(foo);
+const foo = () => {
+	const a = 1;
+	const b = 2;
+	const c = 3;
+	const d = 4;
+	const e = 5;
+	const f = 6;
+	const g = 7;
+	const h = 8;
+	const i = 9;
+	const j = 10;
+	const k = 11;
+	console.log(a, b, c, d, e, f, g, h, i, j, k);
+};
+console.log(foo);
 
 // class foo {
 // 	foo: string;
@@ -140,9 +140,9 @@ const [foo4] = array;
 // [bar.baz] = array;
 
 // With `object` enabled
-const { foo } = object;
+// const { foo1 } = object;
 
-console.log(foo1, foo2, foo3, foo4, foo);
+console.log(foo2, foo3, foo4, foo);
 
 function App() {
 	const [count, setCount] = useState(0);
