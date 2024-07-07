@@ -1,7 +1,7 @@
 # #!/usr/bin/env sh
 echo "hello from pre-commit!"
 git add -A .
-npx lint-staged && echo "Prettier ran successfully!"
+npx lint-staged --verbose && echo "Prettier ran successfully!"
 if [ $? -ne 0 ]; then
     echo "ESLint found errors. Aborting push."
     exit 1

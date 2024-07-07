@@ -100,7 +100,7 @@ const foo = () => {
 	const i = 9;
 	console.log(a, b, c, d, e, f, g, h, i);
 };
-console.log(foo);
+console.log('foo');
 console.log(foo);
 
 // class foo {
