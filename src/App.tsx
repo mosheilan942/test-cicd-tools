@@ -122,8 +122,6 @@ import "./App.css";
 
 // var foo = 1;
 
-// const array = [{ bar: { baz: 100 } }, 2, 3];
-
 // const foo1 = array[0];
 
 // const [{ bar: { baz } }] = array;
