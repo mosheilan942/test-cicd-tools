@@ -113,7 +113,7 @@ import "./App.css";
 
 // window = {}
 
-// console.log('Hello World'), //"big stap for mankind, small step for me");
+// console.log('Hello World'), //"big step for mankind, small step for me");
 
 // const foo = 1;
 // if (foo) {
