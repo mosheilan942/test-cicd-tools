@@ -1,23 +1,53 @@
+image: node:17-alpine
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH != "dev" && $CI_PIPELINE_SOURCE != "marge_request_event"
+      when: never
+    - when: always
+
+variables:
+  docker_hub: "http://docker.io"
+  image_name: "my-image"
+
 stages:
   - build
+  - test
   - deploy
 
 build:
   stage: build
+  only:
+    - dev
+    - main
+  image: node:19-alpine
+  before_script: echo "Building the project..."
   script:
     - cd client
     - npm i --force
     - cd ../server
     - npm i --force
+  after_script: echo "Build completed successfully!"
+  tags:
+    - docker
 
+test:
+  stage: test
+  script:
+    - cd server
+    - npm run test
   tags:
     - docker
 
 deploy:
-  stage: deploy
-  dependencies:
+  needs:
     - build
+  stage: deploy
+  only:
+    - dev
+    - main
   script:
+    - echo "push to $docker_hub:$image_name"
     - cd server
     - npm run start:dev
     - cd ../client
