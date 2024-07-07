@@ -15,7 +15,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "!(*.json|*.md|*.js)": [
+    "(*.tsx|*.ts)": [
       "npm run lint-three",
       "npm run lint-two",
       "npm run lint"

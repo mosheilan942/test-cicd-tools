@@ -122,10 +122,9 @@ import "./App.css";
 
 // var foo = 1;
 
-const array = [{ bar: { baz: 100 } }, 2, 3];
+// const array = [{ bar: { baz: 100 } }, 2, 3];
 
 // const foo1 = array[0];
-bar.baz = array;
 
 // const [{ bar: { baz } }] = array;
 // [bar.baz] = array;
