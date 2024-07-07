@@ -7,18 +7,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "check": "prettier --check .",
-    "lint-two": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint": "eslint . --fix --max-warnings=0",
-    "lint-three": "prettier . --write",
+    "format": "prettier . --write",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\"",
     "prepare": "husky"
   },
   "lint-staged": {
     "(*.tsx|*.ts)": [
-      "npm run lint-three",
-      "npm run lint",
-      "npm run lint-two"
+      "npm run format",
+      "npm run lint"
     ]
   },
   "dependencies": {
