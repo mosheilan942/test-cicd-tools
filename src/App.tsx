@@ -103,6 +103,7 @@ const foo = () => {
 	console.log(a, b, c, d, e, f, g, h, i, j, k);
 };
 console.log(foo);
+console.log(foo);
 
 // class foo {
 // 	foo: string;
