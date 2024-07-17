@@ -1,4 +1,4 @@
-# #!/bin/sh
+# #!/usr/bin/env sh
 
 # # Run ESLint on staged files
 # npx eslint --ext .js,.jsx --cache --fix $(git diff --cached --name-only --diff-filter=ACMRTUXB | grep -E '\.(js|jsx)$')
